@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.4 on win32)" generated="20181017 17:03:01.320">
+<suite id="s1" name="Robotframework" source="C:\Users\Administrator\PycharmProjects\eshare\Robotframework">
+<suite id="s1-s1" name="Demo" source="C:\Users\Administrator\PycharmProjects\eshare\Robotframework\demo.txt">
+<test id="s1-s1-t1" name="test01">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://www.baidu.com</arg>
+<arg>ie</arg>
+</arguments>
+<msg timestamp="20181017 17:03:01.499" level="INFO">Opening browser 'ie' to base url 'http://www.baidu.com'.</msg>
+<status status="PASS" starttime="20181017 17:03:01.499" endtime="20181017 17:03:07.707"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20181017 17:03:09.708" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20181017 17:03:07.707" endtime="20181017 17:03:09.708"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20181017 17:03:09.708" endtime="20181017 17:03:12.731"></status>
+</kw>
+<status status="PASS" starttime="20181017 17:03:01.498" endtime="20181017 17:03:12.732" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20181017 17:03:01.345" endtime="20181017 17:03:12.734"></status>
+</suite>
+<status status="PASS" starttime="20181017 17:03:01.323" endtime="20181017 17:03:12.739"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Robotframework">Robotframework</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Demo">Robotframework.Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

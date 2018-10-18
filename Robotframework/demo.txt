@@ -1,0 +1,8 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Test Cases ***
+test01
+    Open Browser    http://www.baidu.com    ie
+    sleep    2
+    close Browser
