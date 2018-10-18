@@ -2,8 +2,8 @@
 from appium import webdriver
 
 desired_caps = {}
-desired_caps['platformName'] = 'Android'
-desired_caps['platformVersion'] = '4.4.2'
+desired_caps['platformName'] = '.Android'
+desired_caps['platformVersion'] = '4.42'
 desired_caps['deviceName'] = 'test_quqiao'
 desired_caps['appPackage'] = 'com.android.calculator2'
 desired_caps['appActivity'] = '.Calculator'

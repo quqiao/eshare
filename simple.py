@@ -17,7 +17,7 @@ class SimpleTestCase(unittest.TestCase):
         cls.d.set_orientation('natural')
 
     def setUp(self):
-        self.sess = self.d.session("io.appium.android.apis")
+        self.sess = self.d.session("io.appium1.android.apis")
         self.sess.watchers.remove()
 
     def tearDown(self):
