@@ -25,14 +25,14 @@ import time
 def print_time(threadName):
     count = 0
     while count < 5:
-        # time.sleep(delay)
+        time.sleep(1)
         count += 1
-        print("%s: %s" % (threadName, time.ctime(time.time())))
+        print("%s: %s" % (threadName))
 
 # 创建两个线程
 try:
-    _thread.start_new_thread(print_time, ("Thread-1", ))
-    _thread.start_new_thread(print_time, ("Thread-2", ))
+    _thread.start_new_thread(print_time, ("Thread-1" ))
+    _thread.start_new_thread(print_time, ("Thread-2"))
 except:
     print("Error: 无法启动线程")
 
