@@ -94,9 +94,6 @@ class RedHatCheckPoint(unittest.TestCase):
 
 
 
-
-
-
 # 添加Suite
 def Suite():
     # 定义一个单元测试容器
