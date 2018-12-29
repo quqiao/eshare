@@ -138,7 +138,7 @@ Created on 2018年12月18日
 # pickle.dump(selfref_list, output, -1)
 # output.close()
 #
-# pkl_file = open("C:/Users/Administrator/PycharmProjects/eshare/python_test/data.pkl", "rb")
+# pkl_file = open("C:/Users/Administrator/PycharmProjects/eshare/python3_test/data.pkl", "rb")
 # data1 = pickle.load(pkl_file)
 # pprint.pprint(data1)
 # print(data1)
