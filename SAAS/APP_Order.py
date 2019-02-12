@@ -10,11 +10,10 @@ import threading
 import time
 
 head= {
-    "Accept":"*/*",
-    "User-Agent":"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.97 Safari/537.11",
-    "Accept":"application/json",
-    "Content-Type":"application/json",
-    "token":"737611bf031309f09ec661024026a8fe"
+    "Accept": "application/json, text/plain, */*",
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "token":"ab7446432aa4c890b58eedcc884462c6"
 }
 
 "**********************************************************************"
@@ -59,9 +58,7 @@ url_del_order = "https://fctest.guodong.com/app/weapporder/del_order?order_id=26
 "*************************************************************"
 "结算"
 url_settle = "https://fctest.guodong.com/app/weapporder/settle"
-data_settle = {
-
-}
+data_settle = {"action":"cart"}
 "*************************************************************"
 
 def GetData():
@@ -74,8 +71,8 @@ def GetData():
 
 
 def PostData():
-    data2 = parse.urlencode(data_list).encode('utf-8')
-    req = request.Request(url_list, headers=head, data=data2)
+    data2 = parse.urlencode(data_settle).encode('utf-8')
+    req = request.Request(url_settle, headers=head, data=data2)
     page = request.urlopen(req).read()
     page1 = page.decode('utf-8')
     page2 = eval(page1)

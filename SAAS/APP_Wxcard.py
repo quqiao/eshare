@@ -2,7 +2,7 @@
 '''
 Created on 2019年01月23日
 @author: quqiao
-SAAS_小程序，Web端_组团
+SAAS_小程序，小程序端_卡券
 '''
 from urllib import parse
 from urllib import request
@@ -16,32 +16,27 @@ head= {
     "token":"ab7446432aa4c890b58eedcc884462c6"}
 
 "************************************************************************"
-"商品设置-商品列表"
-url_list = "http://fctest.guodong.com/api/groups/goods/list"
-data_list = {"weapp_id": 75}
+"领卡-领卡回调与用户建立联系"
+url_code = "https://fctest.guodong.com/app/weapp/wxcard/code"
+data_code = {"code": ""}
 "************************************************************************"
 
 "************************************************************************"
-"商品管理-商品详情"
-url_details = "http://fctest.guodong.com/api/groups/goods/details"
-data_details = {"groupsId": ""}
+"领卡-获取会员卡信息"
+url_code = "https://fctest.guodong.com/app/weapp/wxcard/info"
+data_code = {"code":"","cardId":""}
 "************************************************************************"
 
 "************************************************************************"
-"商品管理-删除（支持批量删除）"
-url_del = "http://fctest.guodong.com/api/groups/goods/del"
-data_del = {"": ""}
+"领卡-领取卡券"
+url_add = "https://fctest.guodong.com/app/weapp/wxcard/add"
+data_add = {"cardExt": "", "cardId": ""}
 "************************************************************************"
 
-"************************************************************************"
-"商品管理-商品添加/修改"
-url_add = "http://fctest.guodong.com/api/groups/goods/del"
-data_add = {"weapp_id": 75, "goods_name":"test12345", "sort":111, "original_img":""}
-"************************************************************************"
 
 def PostData():
-    data2 = parse.urlencode(data_list).encode('utf-8')
-    req = request.Request(url_list, headers=head, data=data2)
+    data2 = parse.urlencode(data_add).encode('utf-8')
+    req = request.Request(url_add, headers=head, data=data2)
     page = request.urlopen(req).read()
     page1 = page.decode('utf-8')
     page2 = eval(page1)
