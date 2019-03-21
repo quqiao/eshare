@@ -15,7 +15,7 @@ head = {
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded",
-    "token": "cR7wbFpAF32hbR2RQCJKqcj9fCRUKQudj3WaHUr0LR8vy5zAP5DvhkwDKW3gTdJU"
+    "token": "y6DnwBSzu3GrzaTIVT4AA2kCQ49pPAphupkwMGE5LKIZfDHp2p3i1P38ihXj1jwB"
 }
 
 "************************************************************************"
@@ -25,10 +25,10 @@ url_list = "http://fctest.guodong.com/api/coupon/list?page=1&per_page=10&weapp_i
 
 "************************************************************************"
 "优惠券管理操作"
-url_multioperate = "http://fctest.guodong.com/api/coupon/multioperate"
-data_multioperate = {"weapp_id": 192, "action": "add", "coupon_name": "通用券", "lowest_consume": 20,
+url_multioperate = "https://api.365fengchao.com/api/coupon/multioperate"
+data_multioperate = {"weapp_id": 192, "action": "delete", "coupon_name": "通用券", "lowest_consume": 20,
                      "preferential_money": 10, "effective_days": 5,  "coupon_count": 10, "effective_type": 1,
-                     "coupon_type": 2, "add_center": 1, "sort":20,"coupon_id":125,"userid_str":192}
+                     "coupon_type": 2, "add_center": 1, "sort":20,"coupon_id":500,"userid_str":192}
 "action:操作名称,add、delete、update、provide"
 "coupon_name:优惠券名称"
 "lowest_consume:最低消费"

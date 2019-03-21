@@ -15,7 +15,7 @@ head = {
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded",
-    "token": "AoWqtWXhgh1fGO1UdvzZ9i4f2R1ytfebxg1mMvyqiaSdjhLCqIhWqOqZ1ak3LXsn"
+    "token": "y6DnwBSzu3GrzaTIVT4AA2kCQ49pPAphupkwMGE5LKIZfDHp2p3i1P38ihXj1jwB"
 }
 
 "************************************************************************"
@@ -222,13 +222,13 @@ data_snapgoods_save = {"goods_name": "testjiekou001", "original_img": "http://wx
 "************************************************************************"
 "商品管理-商品列表（支持搜索了！！！！）"
 url_snapgoods_get = "http://fctest.guodong.com/api/websnap/snapgoods/get"
-data_snapgoods_get = {"weapp_id": 192, "per_page": 10, "page":1, "onSale":0, "search":""}
+data_snapgoods_get = {"weapp_id": 192, "per_page": 10, "page":1, "onSale": 0, "search":""}
 "************************************************************************"
 
 
 def PostData():
-    data2 = parse.urlencode(data_snapgoods_get).encode('utf-8')
-    req = request.Request(url_snapgoods_get, headers=head, data=data2)
+    data2 = parse.urlencode(data_multioperate).encode('utf-8')
+    req = request.Request(url_multioperate, headers=head, data=data2)
     page = request.urlopen(req).read()
     page1 = page.decode('utf-8')
     page2 = eval(page1)

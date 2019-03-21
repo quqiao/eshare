@@ -15,7 +15,7 @@ head = {
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded",
-    "token": "IYFcmQvZcdPsaryOAnFlr7yCGnl00k04staPxgopEbbZpezI45nRjzHqwbsl5YeM"
+    "token": "qgw1dg3xWp7xlThv7Dkjmk0ytaAlXO6GucA1TrdLW3MmuRyz2mjxU083IxiJecuA"
 }
 "************************************************************************"
 "订单详情"
@@ -53,6 +53,18 @@ data_reply = {"comment_id": 32, "reply": "222", "weapp_id": 75}
 url_orderlist = "http://fctest.guodong.com/api/order/list?page=1&per_page=10&type=1&order_sn=&order_status=&start_time=&end_time=&weapp_id=75"
 "************************************************************************"
 
+"************************************************************************"
+"退款"
+url_refund_order = "http://fctest.guodong.com/api/order/refund_order"
+data_refund_order = {"order_id": 550, "weapp_id": 192}
+"************************************************************************"
+
+"************************************************************************"
+"付款"
+url_order_multioperate = "http://fctest.guodong.com/api/order/multioperate"
+data_order_multioperate = {"order_id": 553, "weapp_id": 192, "action": "updatestatus"}
+"************************************************************************"
+
 def GetData():
     req = request.Request(url_detail, headers=head)
     page = request.urlopen(req).read()
@@ -64,8 +76,8 @@ def GetData():
     print(time.time())
 
 def PostData():
-    data2 = parse.urlencode(data_list).encode('utf-8')
-    req = request.Request(url_list, headers=head, data=data2)
+    data2 = parse.urlencode(data_order_multioperate).encode('utf-8')
+    req = request.Request(url_order_multioperate, headers=head, data=data2)
     page = request.urlopen(req).read()
     page1 = page.decode('utf-8')
     page2 = eval(page1)
