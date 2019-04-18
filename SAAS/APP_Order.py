@@ -13,7 +13,7 @@ head = {
     "Accept": "application/json, text/plain, */*",
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
     "Content-Type": "application/x-www-form-urlencoded",
-    "token": "9963dd9fa6cdd8e131e3691dc8f499a4"
+    "token": "147e3384f96f384d4455132288194aa7"
 }
 
 "**********************************************************************"
@@ -71,8 +71,8 @@ def GetData():
 
 
 def PostData():
-    data2 = parse.urlencode(data_deduction).encode('utf-8')
-    req = request.Request(url_deduction, headers=head, data=data2)
+    data2 = parse.urlencode(data_settle).encode('utf-8')
+    req = request.Request(url_settle, headers=head, data=data2)
     page = request.urlopen(req).read()
     page1 = page.decode('utf-8')
     page2 = page1.replace("null", "222")
