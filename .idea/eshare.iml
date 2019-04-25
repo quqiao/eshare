@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/performance1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/django" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Crawler/demo01" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/python+selenium/SAAS_Basic" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/python+selenium" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6.4 (C:\Users\Administrator\AppData\Local\Programs\Python\Python36\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
